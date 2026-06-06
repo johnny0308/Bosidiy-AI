@@ -11,7 +11,7 @@ GEMINI_KEY = os.environ["GEMINI_KEY"]
 OWNER_ID = int(os.environ["OWNER_ID"])  # Sizning Telegram ID
 
 genai.configure(api_key=GEMINI_KEY)
-model = genai.GenerativeModel("gemini-1.5-flash")
+model = genai.GenerativeModel("gemini-1.5-flash-latest")
 histories = {}
 
 async def start(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
