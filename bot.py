@@ -72,7 +72,7 @@ async def ai_reply(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(res.text)
     except Exception as e:
         logging.error(e)
-        await update.message.reply_text(f"❌ Xatolik yuz berdi.")
+        await update.message.reply_text(f"❌ Xatolik: {str(e)}")
 
 app = ApplicationBuilder().token(TOKEN).build()
 app.add_handler(CommandHandler("start", start))
